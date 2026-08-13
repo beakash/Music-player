@@ -219,7 +219,9 @@
     @media(max-width:900px){
       .main{grid-template-columns:1fr;padding:20px 20px 150px;gap:20px}
       .sidebar{height:380px;position:static}
-      header{padding:14px 20px}
+      header{padding:14px 20px; flex-wrap:wrap;}
+      .header-right{width:100%; justify-content:space-between; margin-top:8px; border-top:1px solid rgba(255,255,255,0.1); padding-top:12px;}
+      .user-badge{border-left:none!important; padding-left:0!important;}
       .bot-prog{display:none}
       .bottom-bar{padding:12px 20px}
     }
@@ -227,6 +229,9 @@
       .vinyl-wrapper{width:240px;height:240px}
       .song-title{font-size:20px}
       .tonearm{display:none}
+      .logo-text p{display:none}
+      .user-email{display:none}
+      .live-badge{font-size:10px; padding:5px 12px;}
     }
   </style>
 </head>
@@ -243,16 +248,16 @@
       </div>
     </div>
     
-    <div style="display:flex; align-items:center; gap:24px;">
+    <div class="header-right" style="display:flex; align-items:center; gap:24px;">
       <div class="live-badge"><div class="live-dot"></div>Streaming Live</div>
       
       <!-- USER PROFILE BADGE -->
-      <div style="display:flex; align-items:center; gap:12px; text-align:right; padding-left:24px; border-left:1px solid rgba(255,255,255,0.1);">
+      <div class="user-badge" style="display:flex; align-items:center; gap:12px; text-align:right; padding-left:24px; border-left:1px solid rgba(255,255,255,0.1);">
         <div>
           <div style="font-size:14px; font-weight:600; color:var(--gold); letter-spacing:0.5px;">Akash Bhagat</div>
-          <div style="font-size:11px; color:var(--dim); font-family:monospace;">126611007+beakash@users.noreply.github.com</div>
+          <div class="user-email" style="font-size:11px; color:var(--dim); font-family:monospace;">126611007+beakash@users.noreply.github.com</div>
         </div>
-        <div style="width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg, rgba(245,166,35,0.15), rgba(255,140,66,0.15)); display:flex; align-items:center; justify-content:center; color:var(--gold); border:1px solid rgba(245,166,35,0.3); font-size:18px;">
+        <div style="width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg, rgba(245,166,35,0.15), rgba(255,140,66,0.15)); display:flex; align-items:center; justify-content:center; color:var(--gold); border:1px solid rgba(245,166,35,0.3); font-size:18px; flex-shrink:0;">
           &#128104;&#8205;&#128187;
         </div>
       </div>
